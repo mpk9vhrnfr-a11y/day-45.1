@@ -1,15 +1,23 @@
-//
-//  main.c
-//  day 45.1
-//
-//  Created by Sanaa Kumar on 26/11/25.
-//
-
-#include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return EXIT_SUCCESS;
+int main(void) {
+    char str[100], ch;
+    int i, count = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    printf("Enter the character to find frequency: ");
+    scanf(" %c", &ch);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] == ch) {
+            count++;
+        }
+    }
+
+    printf("Frequency of '%c' = %d\n", ch, count);
+
+    return 0;
 }
+
